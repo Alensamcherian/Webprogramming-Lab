@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Registration form</title>
+<style>
+body{
+background-image:url("imMg.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+h1{
+color:white;
+text-shadow: 2px 2px 4px #000000;
+}
+#a{
+font-size:20;
+font-weight:1000;
+}
+th{
+font-size:35;
+}
+form{
+max-width:700px;
+min-height:500px;
+background-color:lightblue;
+position:relative;
+top:20px;
+left:350px;
+opacity:0.8;
+}
+.button {
+transition-duration:0.4s;
+font-size: 20px;
+font-weight:700;
+width:250px;
+}
+.button:hover{
+background-color:#5f76e3;
+color: black;
+}
+p{
+font-size:17;
+margin:40px;
+}
+</style>
+</head>
+<body>
+<form>
+<h1><marquee direction="right" behavior="alternate"
+onmouseover="this.stop()" onmouseout="this.start()">WELCOME TO FRESHERS
+WORLD!!!</marquee></h1>
+<table align ="center">
+<tr>
+<th colspan="2">Registration Form</th>
+</tr>
+<tr>
+<td id="a">Name</td>
+<td><input type="text"></td>
+
+</tr>
+<tr>
+<td id="a">Age</td>
+<td><select>
+<option>Select</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+</select></td>
+</tr>
+<tr>
+<td id="a">Password</td>
+<td><input type="password"></td>
+</tr>
+<tr>
+<td id="a">Re-enter Password</td>
+<td><input type="password"></td>
+</tr>
+<tr>
+<td rowspan="5" id="a">Select your security question</td>
+<td><input type="radio" name="abc" >What is your pet name?</td>
+</tr>
+<tr>
+<td><input type="radio" name="abc" >Who is your best friend?</td>
+</tr>
+<tr>
+<td><input type="radio" name="abc" >What is your favourite color?</td>
+</tr>
+<tr>
+<td><input type="radio" name="abc" >Who is your favourite teacher?</td>
+</tr>
+<tr>
+<td><input type="radio" name="abc" >What is your first school name?</td>
+</tr>
+<tr>
+<td id="a">Answer of security question</td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td id="a">E-mail id</td>
+<td><input type="text"/><td>
+</tr>
+<tr>
+<td id="a">Languages Known</td>
+<td><input type="checkbox">English<input type="checkbox">Malayalam<input
+type="checkbox">Hindi</td>
+</tr>
+<tr>
+<td id="a">Phone number</td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td id="a">Upload CV</td>
+<td><input type="file"></td>
+</tr>
+
+</table>
+<p><input type="checkbox">I hereby declare that all the information
+contained in this form is in accordance with facts or truths to my
+knowledge.</p>
+<div align="center">
+<input class="button" type="Reset" />
+<input class="button" type="Submit"/>
+</div>
+</form>
+</body>
+</html>
