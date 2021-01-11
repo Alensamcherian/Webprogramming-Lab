@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>HTML Frames</title>
+<style>
+iframe{
+max-width=100%;
+}
+</style>
+</head>
+<frameset rows="10,25,60" framespacing="0" frameborder="0">
+<frame name="scroll"src="scroll.html" scrolling="no" >
+<frame name="main"src="top_frame.html" scrolling="no" >
+<frameset cols="20,80">
+<frame name="bottom1" src="frame1_bottom.html" scrolling="no" >
+<frame name="bottom2"src="frame2_bottom.html" scrolling="yes" >
+</frameset>
+</frameset>
+</frameset>
+<noframes>
+<body>Your browser does not support frames.</body>
+</noframes>
+</frameset>
+</html>

@@ -1,0 +1,28 @@
+body{
+background-image:url("immg33.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:scroll;
+}
+h1{
+color:white;
+text-shadow: 2px 2px 4px #000000;
+}
+h2{
+color:white;
+text-shadow: 2px 2px 4px #000000;
+}
+form{
+max-width:1030px;
+min-height:500px;
+background-color:#000000;
+position:relative;
+top:20px;
+left:10px;
+opacity:0.7;
+}
+p{
+font-size:20;
+margin:40px;
+color:white;
+}

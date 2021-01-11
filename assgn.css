@@ -1,0 +1,15 @@
+body{
+background-image:url("immg77.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:scroll;
+}
+h1{
+color:white;
+text-shadow: 2px 2px 4px #000000;
+}
+p{
+font-size:20;
+margin:40px;
+color:black;
+}
