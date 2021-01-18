@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>Javascript functions</title>
+<link rel="stylesheet" href="properties.css">
+<style>
+</style>
+<script lang="javascript">
+function len()
+{
+a= document.getElementById('box1').value;
+b=a.length;
+alert("length of string="+b);
+}
+function indexof()
+{
+a= document.getElementById('box1').value;
+b=prompt("Enter the character: ");
+c=a.indexOf(b);
+alert("INDEX OF "+b+"="+c);
+}
+function lastindexof()
+{
+a= document.getElementById('box1').value;
+b=prompt("Enter the character: ");
+c=a.lastIndexOf(b);
+alert("LAST INDEX OF "+b+"="+c);
+}
+function search()
+{
+a= document.getElementById('box1').value;
+b=prompt("Enter the searching element ");
+c=a.search(b);
+alert("LAST INDEX OF="+c);
+}
+function slice()
+{
+a= document.getElementById('box1').value;
+b=prompt("Enter the first index ");
+c=prompt("Enter the last index");
+d=a.slice(b,c);
+alert("sliced element="+d);
+}
+function substring()
+{
+a= document.getElementById('box1').value;
+
+b=prompt("Enter the first index ");
+c=prompt("Enter the last index");
+d=a.substring(b,c);
+alert("substring new element="+d);
+}
+function replace()
+{
+a= document.getElementById('box1').value;
+b=prompt("old string ");
+c=prompt("new string")
+d=a.replace(b,c);
+alert("Substring of new elemnt="+d);
+}
+function upper()
+{
+a=document.getElementById('box1').value;
+b=a.toUpperCase();
+alert(b);
+}
+function lower()
+{
+a=document.getElementById('box1').value;
+b=a.toLowerCase();
+alert(b);
+}
+function round()
+{
+a=document.getElementById('box2').value;
+b=Math.round(a);
+alert(b);
+}
+function power()
+{
+a=document.getElementById('box2').value;
+b=prompt("enter the power value");
+c=Math.pow(a,b);
+alert("power is="+c);
+}
+function sqrt()
+{
+a=document.getElementById('box2').value;
+b=Math.sqrt(a);
+alert("square root is="+b);
+}
+function abs()
+{
+a=document.getElementById('box2').value;
+b=Math.abs(a);
+alert("absolute is="+b);
+}
+
+function ceil()
+{
+a=document.getElementById('box2').value;
+b=Math.ceil(a);
+alert("ceil is="+b);
+}
+function floor()
+{
+a=document.getElementById('box2').value;
+b=Math.floor(a);
+alert("floor is="+b);
+}
+function random()
+{
+alert(Math.random());
+}
+function pi()
+{
+alert(Math.PI);
+}
+</script>
+</head>
+<body>
+<center>
+<marquee direction="down" width="1075" height="35" behavior="alternate"
+style="border:solid" class:margin="0">
+<marquee behavior="alternate">
+<h1>JAVASCRIPT FUNCTIONS<h1>
+</marquee>
+</marquee>
+<form>
+<h1><I><u>Math and String Calculator </u></I></h1><br><br>
+<h2>Enter the string<br><input type="text" id="box1" ></input></h2>
+<table >
+<tr>
+<th><input type="button" value="LENGTH" onClick="len()"></th>
+<th><input type="button" value="INDEXOF" onClick="indexof()"> </th>
+</tr>
+<tr>
+<th><input type="button" value="LAST INDEXOF" onClick="lastindexof()"></th>
+<th><input type="button" value="SEARCH" onClick="search()"></th>
+</tr>
+<tr>
+<th><input type="button" value="SLICE" onClick="slice()"></th>
+<th><input type="button" value="SUBSTRING" onClick="substring()"></th>
+</tr>
+<tr>
+<th><input type="button" value="REPLACE" onClick="replace()"></th>
+
+<th><input type="button" value="TO_UPPERCASE" onClick="upper()"></th>
+</tr>
+</table>
+<input type="button" value="TO_LOWERCASE" onClick="lower()">
+<h2>Enter the number<br><input type="text" id="box2"></input></h2>
+<table>
+<tr>
+<th><input type="button" value="ABSOLUTE" onClick="abs()"> </th>
+<th><input type="button" value="ROUND" onClick="round()"></th>
+</tr>
+<tr>
+<th><input type="button" value="SQUARE ROOT" onClick="sqrt()"></th>
+<th><input type="button" value="POWER" onClick="power()"></th>
+</tr>
+<tr>
+<th><input type="button" value="CEIL" onClick="ceil()" ></th>
+<th><input type="button" value="RANDOM" onClick="random()"></th>
+</tr>
+<tr>
+<th><input type="button" value="FLOOR" onClick="floor()"></th>
+<th><input type="button" value="PI" onClick="pi()"> </th>
+</tr>
+</center>
+</form>
+</body>
+</html>
