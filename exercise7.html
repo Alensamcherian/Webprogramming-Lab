@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Javascript calender</title>
+<link rel="stylesheet" href="prop.css">
+<script language="JavaScript">
+function setToday() {
+var now = new Date();
+var day = now.getDate();
+var month = now.getMonth();
+var year = now.getYear();
+if (year < 2000)
+year = year + 1900;
+this.focusDay = day;
+document.calControl.month.selectedIndex = month;
+document.calControl.year.value = year;
+displayCalendar(month, year);
+}
+function isFourDigitYear(year) {
+if (year.length != 4) {
+alert ("Sorry, the year must be four-digits in length.");
+document.calControl.year.select();
+document.calControl.year.focus();
+} else { return true; }
+}
+function selectDate() {
+var year = document.calControl.year.value;
+if (isFourDigitYear(year)) {
+var day = 0;
+var month = document.calControl.month.selectedIndex;
+displayCalendar(month, year);
+}
+}
+function displayCalendar(month, year) {
+month = parseInt(month);
+year = parseInt(year);
+var i = 0;
+var days = getDaysInMonth(month+1,year);
+var firstOfMonth = new Date (year, month, 1);
+var startingPos = firstOfMonth.getDay();
+days += startingPos;
+document.calButtons.calPage.value = " Su Mo Tu We Th Fr Sa";
+document.calButtons.calPage.value += "\n --------------------";
+for (i = 0; i < startingPos; i++) {
+if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
+document.calButtons.calPage.value += " ";
+}
+for (i = startingPos; i < days; i++) {
+if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
+if (i-startingPos+1 < 10)
+
+document.calButtons.calPage.value += "0";
+document.calButtons.calPage.value += i-startingPos+1;
+document.calButtons.calPage.value += " ";
+}
+for (i=days; i<42; i++) {
+if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
+document.calButtons.calPage.value += " ";
+}
+document.calControl.Go.focus();
+}
+function getDaysInMonth(month,year) {
+var days;
+if (month==1 || month==3 || month==5 || month==7 || month==8 || month==10 ||
+month==12) days=31;
+else if (month==4 || month==6 || month==9 || month==11) days=30;
+else if (month==2) {
+if (isLeapYear(year)) { days=29; }
+else { days=28; }
+}
+return (days);
+}
+function isLeapYear (Year) {
+if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0)) {
+return (true);
+} else { return (false); }
+}
+</SCRIPT>
+</head>
+<body>
+<h1>Calender</h1>
+<form name="calControl" onSubmit="return false;" method="post">
+<table cellpadding=10 cellspacing=10 border=0>
+<tr><td colspan=7>
+<select name="month" onChange="selectDate()">
+<option>SELECT</option>
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+</select>
+<input name="year" type=text size=4 maxlength=4>
+
+<input type="button" name="Go" value="Run" onClick="selectDate()">
+</td>
+</tr>
+</form>
+<form name="calButtons" method="post">
+<tr><td><textarea font="Courier" name="calPage" wrap=no rows=8
+cols=22></textarea></td><tr><td>
+</td></tr>
+</table></form></font>
+</form>
+</body>
+</html>
