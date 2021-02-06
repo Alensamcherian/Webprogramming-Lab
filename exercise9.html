@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>change color</title>
+</head>
+<body><center>
+<input id="c" type="button" value="CLICK HERE!!">
+<script>
+document.getElementById("c").addEventListener("click",colorchange);
+function colorchange(){
+var color='#'+ Math.floor(Math.random()*16777215).toString(16);
+document.body.style.background=color;
+}
+</script>
+</body>
+</html>
