@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Exercise 10</title>
+</head>
+<body><center>
+<img src="porsche.jpg" height="50%" width="50%" align="center" id="b">
+</img>
+<p id="c">PARENTAL ADVISORY EXPLICIT CONTENT</p>
+<script>
+document.getElementById("b").addEventListener("mouseover",myfun);
+document.getElementById("b").addEventListener("mouseover",myfun1);
+
+function myfun()
+{
+document.getElementById("b").src="porsche.jpg";
+}
+function myfun1()
+{
+document.getElementById("b").src="imMg.jpg";
+}
+
+
+
+document.getElementById("c").addEventListener("mouseover",myfun4);
+document.getElementById("c").addEventListener("mouseover",myfun5);
+function myfun4()
+{
+document.getElementById("c").innerHTML="DON'T TELL PEOPLE YOUR PLANS.SHOW THEM YOUR RESULTS";
+}
+
+
+</script>
+</center>
+</body>
+</html>
