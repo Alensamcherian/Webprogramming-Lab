@@ -1,0 +1,33 @@
+<?php
+if(isset($_POST["submit"]))
+{
+$name=$_POST["name"];
+$password=$_POST["password"];
+$ph=$_POST["phno"];
+$email=$_POST["email"];
+if($name="")
+{
+echo '<script>alert("Please enter name");</script>';
+}
+if($password=="")
+{
+echo '<script>alert("Please enter password");</script>';
+}
+else if(strlen($password)<8)
+{
+echo '<script>alert("Password must contain atleast 8 digits");</script>';
+}
+if($ph=="")
+{
+echo '<script>alert("Please enter phonenumber");</script>';
+}
+else if(!ctype_digit($ph)||strlen($ph)!=10)
+{
+echo '<script>alert("Please enter valid phonenumber");</script>';
+}
+if($email=="")
+{
+echo '<script>alert("Please enter email");</script>';
+}
+}
+?>
